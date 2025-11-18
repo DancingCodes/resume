@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'LXGW WenKai Lite';
+    src: url('./font/LXGWWenKaiLite-Regular.woff2') format('woff2');
+    font-display: block;
+}
+
+body {
+    margin: 0;
+    background-color: #f1f1f1;
+    font-family: 'LXGW WenKai Lite';
+    padding-top: 10px;
+
+    #loading {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f1f1f1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 1s;
+
+        .loader {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 3px solid #ddd;
+            border-top-color: #333;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+    }
+
+
+    .PublicPadding {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .welText {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .authorBox {
+        margin-top: 10px;
+
+        .title {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .gridBox {
+            margin-top: 4px;
+            padding: 0 6px;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            justify-content: space-between;
+            font-size: 16px;
+            row-gap: 6px;
+
+            .towCol {
+                grid-column: 2 span;
+            }
+
+            div {}
+
+        }
+    }
+
+    .companyBox {
+        margin-top: 10px;
+
+        .title {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .list {
+            margin-top: 4px;
+
+            .row {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .workBox {
+        margin-top: 10px;
+
+        .title {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .list {
+            margin-top: 4px;
+
+            .row:not(:first-child) {
+                margin-top: 10px;
+            }
+
+            .row {
+                .projectName {
+                    font-size: 16px;
+                }
+
+                .projectIntro {
+                    font-size: 16px;
+                    text-indent: 1em;
+                }
+
+                .workContent {
+                    font-size: 16px;
+                    text-indent: 1em;
+                }
+
+                .techStack {
+                    font-size: 16px;
+                    text-indent: 1em;
+                }
+            }
+        }
+    }
+}

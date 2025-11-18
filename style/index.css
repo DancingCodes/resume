@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'LXGW WenKai Lite';
+  src: url('font/LXGWWenKaiLite-Regular.woff2') format('woff2');
+  font-display: block;
+}
+body {
+  margin: 0;
+  background-color: #f1f1f1;
+  font-family: 'LXGW WenKai Lite';
+  padding-top: 10px;
+}
+body #loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s;
+}
+body #loading .loader {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #ddd;
+  border-top-color: #333;
+  animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body .PublicPadding {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+body .welText {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+body .authorBox {
+  margin-top: 10px;
+}
+body .authorBox .title {
+  font-weight: bold;
+  font-size: 16px;
+}
+body .authorBox .gridBox {
+  margin-top: 4px;
+  padding: 0 6px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  font-size: 16px;
+  row-gap: 6px;
+}
+body .authorBox .gridBox .towCol {
+  grid-column: 2 span;
+}
+body .companyBox {
+  margin-top: 10px;
+}
+body .companyBox .title {
+  font-weight: bold;
+  font-size: 16px;
+}
+body .companyBox .list {
+  margin-top: 4px;
+}
+body .companyBox .list .row {
+  font-size: 16px;
+}
+body .workBox {
+  margin-top: 10px;
+}
+body .workBox .title {
+  font-weight: bold;
+  font-size: 16px;
+}
+body .workBox .list {
+  margin-top: 4px;
+}
+body .workBox .list .row:not(:first-child) {
+  margin-top: 10px;
+}
+body .workBox .list .row .projectName {
+  font-size: 16px;
+}
+body .workBox .list .row .projectIntro {
+  font-size: 16px;
+  text-indent: 1em;
+}
+body .workBox .list .row .workContent {
+  font-size: 16px;
+  text-indent: 1em;
+}
+body .workBox .list .row .techStack {
+  font-size: 16px;
+  text-indent: 1em;
+}
