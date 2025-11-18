@@ -7,10 +7,11 @@ body {
   margin: 0;
   background-color: #f1f1f1;
   font-family: 'LXGW WenKai Lite';
-  padding-top: 10px;
+  padding: 20px 0;
 }
 body #loading {
   position: fixed;
+  z-index: 999999;
   left: 0;
   top: 0;
   width: 100%;
@@ -38,24 +39,39 @@ body #loading .loader {
     transform: rotate(360deg);
   }
 }
+body #toTop {
+  position: fixed;
+  z-index: 9;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 30px;
+}
 body .PublicPadding {
   padding: 0 10px;
   box-sizing: border-box;
 }
 body .welText {
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
 }
 body .authorBox {
-  margin-top: 10px;
+  margin-top: 16px;
 }
 body .authorBox .title {
   font-weight: bold;
   font-size: 16px;
 }
 body .authorBox .gridBox {
-  margin-top: 4px;
+  margin-top: 10px;
   padding: 0 6px;
   box-sizing: border-box;
   display: grid;
@@ -68,30 +84,37 @@ body .authorBox .gridBox .towCol {
   grid-column: 2 span;
 }
 body .companyBox {
-  margin-top: 10px;
+  margin-top: 16px;
 }
 body .companyBox .title {
   font-weight: bold;
   font-size: 16px;
 }
 body .companyBox .list {
-  margin-top: 4px;
+  margin-top: 10px;
+}
+body .companyBox .list .row:not(:first-child) {
+  margin-top: 6px;
 }
 body .companyBox .list .row {
   font-size: 16px;
 }
 body .workBox {
-  margin-top: 10px;
+  margin-top: 16px;
 }
 body .workBox .title {
   font-weight: bold;
   font-size: 16px;
 }
 body .workBox .list {
-  margin-top: 4px;
+  margin-top: 10px;
 }
 body .workBox .list .row:not(:first-child) {
   margin-top: 10px;
+}
+body .workBox .list .row {
+  line-height: 26px;
+  letter-spacing: 1px;
 }
 body .workBox .list .row .projectName {
   font-size: 16px;
